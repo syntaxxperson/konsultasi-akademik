@@ -36,8 +36,4 @@ Website portal layanan akademik yang memudahkan mahasiswa untuk mengajukan konsu
 
 ## Tujuan
 
-Proyek ini dibuat untuk menerapkan konsep dasar pengembangan website, meliputi struktur HTML, desain antarmuka menggunakan CSS, dan interaktivitas menggunakan JavaScript.
-
-## Pengembang
-
-Portal Konsultasi & Layanan Akademik Dosen
+Proyek ini dibuat untuk menyelesaikan tugas mata kuliah pemrograman berbasis platform dengan menerapkan konsep dasar pengembangan website, meliputi struktur HTML semantic, desain antarmuka menggunakan CSS, dan interaktivitas menggunakan JavaScript.
