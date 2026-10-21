@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Portal Konsultasi & Layanan Akademik Dosen</title>
+</head>
+
+<body>
+
+  <!-- Header / Identitas Portal -->
+  <header>
+    <img src="img/logo unpatti.png" alt="Logo Universitas Pattimura" class="logo">
+    <div class="header-text">
+      <h1>Portal Konsultasi & Layanan Akademik</h1>
+      <p>Fakultas Sains dan Teknologi - Universitas Pattimura</p>
+    </div>
+  </header>
+
+  <!-- Navigasi Utama -->
+  <nav>
+    <ul>
+      <li><a href="#beranda">Beranda</a></li>
+      <li><a href="#hero">Layanan Konsultasi</a></li>
+      <li><a href="#permohonan">Form Permohonan</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- Bagian Utama (Main) -->
+  <main>
+
+    <!-- Section 1: Intro / Informasi Singkat -->
+    <section id="hero">
+      <!-- Overlay Gelap agar teks putih terbaca jelas -->
+      <div class="hero-overlay">
+        <!-- Teks Tumpang Tindih di Atas Gambar -->
+        <div class="hero-content">
+          <p class="hero-subttitle">LAYANAN AKADEMIK MAHASISWA</p>
+          <h2 class="hero-title">Butuh Arahan Akademik? <br>Konsultasikan Bersama Dosen.</h2>
+        </div>
+
+        <!-- Kartu Mengambang / Transparan di Bagian Bawah Hero -->
+        <div class="hero-cards">
+          <!-- Kartu 1 -->
+          <article class="hero-card">
+            <h3>Bimbingan Skripsi / TA</h3>
+            <p>Diskusikan penelitian, tugas akhir, dan
+              perkembangan penyusunan skripsi.</p>
+            <a href="#permohonan" class="btn-selengkapnya">Ajukan Sekarang</a>
+          </article>
+
+          <!-- Kartu 2 -->
+          <article class="hero-card">
+            <h3>Konsultasi KRS & Studi</h3>
+            <p>Dapatkan arahan mengenai rencana studi,
+              pemilihan mata kuliah, dan akademik.</p>
+            <a href="#permohonan" class="btn-selengkapnya">Ajukan Sekarang</a>
+          </article>
+
+          <!-- Kartu 3 -->
+          <article class="hero-card">
+            <h3>Surat Rekomendasi</h3>
+            <p>Ajukan permohonan rekomendasi untuk
+              kebutuhan akademik sesuai ketentuan.</p>
+            <a href="#permohonan" class="btn-selengkapnya">Ajukan Sekarang</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Form Permohonan (Menggunakan Fieldset & Legend) -->
+    <section id="permohonan">
+      <h2>Form Permohonan Konsultasi</h2>
+      <form id="formKonsultasi">
+
+        <!-- Kelompok 1: Informasi Data Diri -->
+        <fieldset>
+          <legend>Informasi Mahasiswa</legend>
+
+          <!-- Field 1: Nama -->
+          <div>
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap Anda">
+          </div>
+
+          <!-- Field 2: Email -->
+          <div>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required placeholder="anda@gmail.com">
+          </div>
+        </fieldset>
+
+        <!-- Kelompok 2: Detail Permohonan Konsultasi -->
+        <fieldset>
+          <legend>Detail Layanan</legend>
+
+          <!-- Field 3: Jenis Layanan -->
+          <div>
+            <label for="jenis-layanan">Jenis Layanan:</label>
+            <select id="jenis-layanan" name="jenis_layanan" required>
+              <option value="" disabled selected>-- Pilih Jenis Layanan --</option>
+              <option value="bimbingan">Bimbingan Skripsi / TA</option>
+              <option value="krs">Konsultasi KRS & Studi</option>
+              <option value="rekomendasi">Permohonan Surat Rekomendasi</option>
+            </select>
+          </div>
+
+          <!-- Field 4: Keperluan -->
+          <div>
+            <label for="keperluan">Keperluan / Topik Konsultasi:</label>
+            <textarea id="keperluan" name="keperluan" rows="4" required
+              placeholder="Tuliskan detail atau topik yang ingin dikonsultasikan..."></textarea>
+          </div>
+        </fieldset>
+
+        <!-- Tombol Submit (Diluar fieldset agar terpisah sebagai aksi utama) -->
+        <div>
+          <button type="submit">Kirim Permohonan</button>
+        </div>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; Copyright2026 Konsultasi Akademik.</p>
+  </footer>
+
+</body>
+<script>
+  document.getElementById("formKonsultasi").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    console.log("=== DATA PERMOHONAN KONSULTASI ===");
+    console.log("Nama:", document.getElementById("nama").value);
+    console.log("Email:", document.getElementById("email").value);
+    console.log("Layanan:", document.getElementById("jenis-layanan").value);
+    console.log("Keperluan:", document.getElementById("keperluan").value);
+  });
+</script>
+
+</html>
